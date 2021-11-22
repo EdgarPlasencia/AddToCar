@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recursos/bootstrap.css">
+    <title>Document</title>
+</head>
+<body onload="cargarCatalogo()">
+
+
+    <div class="split left">
+        <div class="text-center">
+          <h1>BUSCADOR</h1>
+          <p>Buscador de productos por categorias</p>
+        </div>
+        
+            <select id="catalogo" onchange="cargarCB()" class="form-select" aria-label="Default select example">
+            <option selected>Categorias...</option>
+          </select> 
+        
+    <div id="inventario" class="productos">
+    <p id="item1"><img id="Img1" class="imgItem" src="recursos/loading.png"/>Elija una categoria para cargar&emsp;<button id="btn1"class="addItem"><img id="img1" class="addIcon" src="recursos/add.png"/></button></p>
+    </div> 
+
+      <!--FIN DE LA PARTE IZQUIERDA-->    
+      </div>
+      
+      <div class="split right">
+        <div class="text-center">
+          <h1>CARRITO</h1>
+          <p>Resumen de su compra y total a pagar</p>
+        </div>
+
+        <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">Cantidad</th>
+                <th scope="col">VistaPrev</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody id="resumen">
+
+            </tbody>
+          </table>
+          <div id="factura" style="text-align: left;">
+            <p id="iva" style="font-size: 2em;">
+                I.V.A:
+            </p>
+            <p id="subtotal" style="font-size: 3em;">
+                SubTotal:
+            </p>
+            <p id="total" style="font-size: 4em;">
+                TOTAL:
+            </p>
+
+          </div>
+
+        <!--FIN DE LA PARTE DERECHA-->   
+      </div>
+
+      <script type="text/javascript" src="recursos/script.js">
+        
+      </script>
+</body>
+</html>
